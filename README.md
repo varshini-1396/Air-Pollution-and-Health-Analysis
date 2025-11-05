@@ -4,6 +4,12 @@
 > The project performs exploratory data analysis, hypothesis testing, and machine learning modeling to predict the **Health Impact Score** from air quality and weather data.
 
 ---
+## 📦 Dataset Source
+
+This project uses the **Air Quality and Health Impact Dataset** available on **Kaggle**.
+
+📘 **Dataset Link:**  
+[🔗 Air Quality and Health Impact Dataset – Kaggle](https://www.kaggle.com/datasets/rabieelkharoua/air-quality-and-health-impact-dataset)
 
 ## 🧭 Quick Navigation
 
