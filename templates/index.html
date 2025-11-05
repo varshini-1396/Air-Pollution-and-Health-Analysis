@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Quality & Health Impact Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🌍 Air Quality & Health Impact Predictor</h1>
+        <p class="subtitle">Estimate the Health Impact Score from Air Quality and Health Data</p>
+
+        <form action="/predict" method="post" class="form-grid">
+            <input type="number" step="any" name="AQI" placeholder="Air Quality Index (AQI)" required>
+            <input type="number" step="any" name="PM10" placeholder="PM10 (μg/m³)" required>
+            <input type="number" step="any" name="PM25" placeholder="PM2.5 (μg/m³)" required>
+            <input type="number" step="any" name="NO2" placeholder="NO₂ (μg/m³)" required>
+            <input type="number" step="any" name="SO2" placeholder="SO₂ (μg/m³)" required>
+            <input type="number" step="any" name="O3" placeholder="O₃ (μg/m³)" required>
+            <input type="number" step="any" name="Temperature" placeholder="Temperature (°C)" required>
+            <input type="number" step="any" name="Humidity" placeholder="Humidity (%)" required>
+            <input type="number" step="any" name="WindSpeed" placeholder="Wind Speed (m/s)" required>
+            <input type="number" step="any" name="RespiratoryCases" placeholder="Respiratory Cases" required>
+            <input type="number" step="any" name="CardiovascularCases" placeholder="Cardiovascular Cases" required>
+            <input type="number" step="any" name="HospitalAdmissions" placeholder="Hospital Admissions" required>
+
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if prediction_text %}
+        <div class="result">
+            🩺 Predicted Health Impact Score: <span>{{ prediction_text }}</span>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
